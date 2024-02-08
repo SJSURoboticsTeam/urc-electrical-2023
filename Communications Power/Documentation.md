@@ -43,3 +43,18 @@ buck2 -- "5V" --> usb
 RJ1 -- "ethernet" --> RJ2
 RJ2 -- "ethernet" --> RJ1
 ```
+
+## Typical Application
+
+```mermaid
+block-beta
+columns 5
+tplink space pow["Comm Power"]  space tower
+space:5
+space device["USB Device"]
+tplink -- "Ethernet" --> pow
+pow -- "Ethernet" --> tplink
+pow -- "PoE Ethernet" --> tower
+tower -- "PoE Ethernet" --> pow
+pow -- "USB" --> device
+```
