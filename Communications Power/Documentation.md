@@ -8,6 +8,16 @@
 
 ## Authors
 
+Board Design
+
+- Sofia F
+
+PCB Build
+
+- Shin Umeda
+
+Documentation
+
 - Shin Umeda
 
 ## Active Revisions
@@ -58,3 +68,9 @@ pow -- "PoE Ethernet" --> tower
 tower -- "PoE Ethernet" --> pow
 pow -- "USB" --> device
 ```
+
+## Known Issues
+
+- Noticeable coil whine
+- Some capacitors are too small, one is too big
+- Actually outputs 26V
