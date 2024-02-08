@@ -3,7 +3,7 @@
 ## Features
 
 - USB-CAN
-- Passive PoE (12V)
+- Passive PoE (24V)
 - USB-A Power (12V)
 
 ## Authors
