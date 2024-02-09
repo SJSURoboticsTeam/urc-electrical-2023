@@ -71,6 +71,7 @@ pow -- "USB" --> device
 
 ## Known Issues
 
-- Noticeable coil whine
 - Some capacitors are too small, one is too big
-- Actually outputs 26V
+  - Large capacitor needs more space to support 50V
+- Capacitors values are not high enough
+  - Workaround: Bodge a 100uF 50V electrolytic capacitor
