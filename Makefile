@@ -12,9 +12,11 @@ build/%.html.d : %.md build/build.js
 build/%.html : %.md build/build.js
 	node build/build.js $< $@
 
-build/build.js: build.ts package.json tsconfig.json package-lock.json
-	npm install
+build/build.js: build.ts tsconfig.json package-lock.json
 	npm run build
+
+package-lock.json: package.json
+	npm install
 
 clean:
 	rm -rdf build
