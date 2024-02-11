@@ -1,4 +1,4 @@
-.PHONY := clean all
+.PHONY: clean all
 BUILD := CommunicationPower/Documentation.md
 TARGETS := $(addsuffix .html, $(addprefix build/, $(basename $(BUILD))))
 DEPS := $(addsuffix .d, $(TARGETS))

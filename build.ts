@@ -63,7 +63,7 @@ try {
     } else {
         const pwd = path.dirname(input) + '/';
         const deps = Array.from(embeds).map((x) => pwd + x);
-        const rule = deps.map((x) => `build/${x}: ${x}\n\tcp ${x} build/${x}`).reduce((old, new_val) => old + '\n' + new_val, '');
+        const rule = deps.map((x) => `${x}:\n\nbuild/${x}: ${x}\n\tcp ${x} build/${x}`).reduce((old, new_val) => old + '\n' + new_val, '');
         const depdata = `${output.slice(0, -2)} ${output}: ${input} ${deps.map((x) => 'build/' + x).reduce((prev, new_val) => prev + ' ' + new_val, '')}`;
         fs.writeFile(output, `${rule}\n${depdata}`);
     }
