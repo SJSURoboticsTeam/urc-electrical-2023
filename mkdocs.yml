@@ -1,0 +1,22 @@
+site_name: URC-Electrical-2023
+site_url: https://example.com/
+nav:
+  - Home: index.md
+  - Boards:
+    - 'Communcation Power': CommunicationPower/Documentation.md
+    - 'Drill': Drill/Documentation.md
+
+extra:
+  version:
+    provider: mike
+
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10.8.0/dist/mermaid.min.js
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
