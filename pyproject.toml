@@ -10,6 +10,7 @@ python = "^3.11"
 mkdocs = "^1.5.3"
 pymdown-extensions = "^10.7"
 mkdocs-material = "^9.5.9"
+mkdocs-macros-plugin = "^1.0.5"
 
 [build-system]
 requires = ["poetry-core"]
