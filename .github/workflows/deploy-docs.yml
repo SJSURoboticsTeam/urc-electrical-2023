@@ -1,0 +1,36 @@
+name: Deploy Documentation
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+permissions:
+  contents: write
+env:
+  GIT_COMMITTER_NAME: ci-bot
+  GIT_COMMITTER_EMAIL: sjsurobotics@gmail.com
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Timezone error workaround  
+      run: rm -f /etc/localtime
+    - run: ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
+    - uses: actions/checkout@v2
+      with:
+        depth: 0
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - name: Install poetry
+      uses: abatilo/actions-poetry@v2
+    - uses: actions/cache@v3
+      name: Define a cache for the virtual environment based on the dependencies lock file
+      with:
+        path: ./.venv
+        key: venv-${{ hashFiles('poetry.lock') }}
+    - name: Install the project dependencies
+      run: poetry install --no-root
+    - name: Set default doc
+      run: poetry run mike set-default main
+    - name: Build documenation
+      run: poetry run mike deploy ${{ github.ref_name }}
