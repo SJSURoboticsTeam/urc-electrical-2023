@@ -4,7 +4,6 @@ nav:
   - Home: index.md
   - Boards:
     - 'Communcation Power': CommunicationPower/Documentation.md
-    - Drill: Drill/Documentation.md
     - Drive: Drive.md
     
 plugins:
