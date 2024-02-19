@@ -4,6 +4,10 @@
 
 ## Authors
 
+Documentation
+
+- Shin Umeda
+
 ## Active Revisions
 
 - Rev A
