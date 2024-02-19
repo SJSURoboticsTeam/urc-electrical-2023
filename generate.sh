@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 
 set -e
+git for-each-ref --shell \
+  --format='git checkout %(objectname) && poetry run mike deploy %(refname:lstrip=2);' \
+  refs/heads/
 eval $(git for-each-ref --shell \
   --format='git checkout %(objectname) && poetry run mike deploy %(refname:lstrip=2);' \
   refs/heads/)
