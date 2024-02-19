@@ -27,7 +27,7 @@ jobs:
         key: venv-${{ hashFiles('poetry.lock') }}
     - name: Install the project dependencies
       run: poetry install --no-root
-    - name: Set default doc
-      run: poetry run mike set-default main
     - name: Build documenation
-      run: poetry run mike deploy ${{ github.ref_name }}
+      run: poetry run mike deploy ${{ github.ref_name }} -b gh-pages --push
+    - run: poetry run mike set-default main
+      continue-on-error: true
