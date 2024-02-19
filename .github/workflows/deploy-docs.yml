@@ -12,9 +12,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Timezone error workaround  
-      run: rm -f /etc/localtime
-    - run: ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
     - uses: actions/checkout@v2
       with:
         depth: 0
