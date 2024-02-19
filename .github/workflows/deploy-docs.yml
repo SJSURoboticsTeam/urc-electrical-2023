@@ -3,8 +3,6 @@ on:
   push:
     branches-ignore:
       - gh-pages
-permissions:
-  contents: write
 env:
   GIT_COMMITTER_NAME: ci-bot
   GIT_COMMITTER_EMAIL: sjsurobotics@gmail.com
@@ -28,6 +26,6 @@ jobs:
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Build documenation
-      run: poetry run mike deploy ${{ github.ref_name }} -b gh-pages --push
+      run: ./generate.sh
     - run: poetry run mike set-default main
       continue-on-error: true
