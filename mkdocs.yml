@@ -7,9 +7,10 @@ nav:
     - Drive: Drive.md
     
 plugins:
-    - search
-    - macros
-
+  - search
+  - macros
+  - mkdocs-pdf
+  
 theme:
   name: material
   palette:
@@ -50,3 +51,4 @@ markdown_extensions:
   - pymdownx.pathconverter:
       absolute: false
       tags: 'a script img link object embed'
+  - attr_list
