@@ -3,8 +3,10 @@ repo_url: https://github.com/SJSURoboticsTeam/urc-electrical-2023
 nav:
   - Home: index.md
   - Boards:
-    - 'Communcation Power': CommunicationPower/Documentation.md
-    - Drive: Drive.md
+    - Communcation Power: CommunicationPower/Documentation.md
+    - Drive:
+      - Datasheet: Drive/Documentation.md
+      - Schematic: Drive/Schematic.md
     
 plugins:
   - search
