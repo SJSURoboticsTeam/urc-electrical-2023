@@ -15,6 +15,7 @@ nav:
     - Arm Breakout:
       - Datasheet: Arm Breakout/Datasheet.md
       - Schematic: Arm Breakout/Schematic.md
+    - LPC Micromod Schematic: LPC4078 MicroMod/Schematic.md
     
 plugins:
   - search
