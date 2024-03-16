@@ -7,6 +7,14 @@ nav:
     - Drive:
       - Datasheet: Drive/Documentation.md
       - Schematic: Drive/Schematic.md
+    - Arm System Controller:
+      - Schematic: Arm System Controller/Schematic.md
+    - Buck:
+      - Datasheet: Buck/Datasheet.md
+      - Schematic: Buck/Schematic.md
+    - Arm Breakout:
+      - Datasheet: Arm Breakout/Datasheet.md
+      - Schematic: Arm Breakout/Schematic.md
     
 plugins:
   - search
